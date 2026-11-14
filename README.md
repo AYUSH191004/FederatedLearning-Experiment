@@ -204,21 +204,22 @@ Note: The metrics were uploaded retrospectively from the completed experiment hi
 ## Repository structure
 
 ```text
-PathMNIST-FL/
+FederatedLearning-Experiment/
 │
+├── Configs/
+│   └── Experiment.json
+├── Notebooks/
+│   └── FL-experiment.ipynb
+
 ├── README.md
 ├── .gitignore
 ├── requirements.txt
 │
-├── notebooks/
-│   └── pathmnist_federated_learning.ipynb
 │
-├── configs/
-│   └── experiment_config.json
 │
-├── results/
-│   ├── figures/
-│   └── reports/
+├── Results/
+│   └── plots/
+|          
 │
 ├── artifacts/
 │   ├── fedavg_final.pth
@@ -236,11 +237,11 @@ Dataset files are excluded from version control and can be downloaded using MedM
 
 The implementation is provided in the Jupyter notebook:
 
-`notebooks/pathmnist_federated_learning.ipynb`
+`Notebooks/FL-experiment.ipynb`
 
 The experiment configuration is available in:
 
-`configs/experiment_config.json`
+`Configs/Experiment.json`
 
 The notebook contains the dataset preparation, client partitioning, label-noise injection, model implementation, federated training, aggregation, and evaluation workflow.
 
