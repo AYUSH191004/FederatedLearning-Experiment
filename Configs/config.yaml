@@ -1,0 +1,27 @@
+experiment:
+  name: pathmnist-federated-learning
+  seed: 0
+
+dataset:
+  name: PathMNIST
+  num_classes: 9
+  image_size: 28
+
+federated:
+  num_clients: 5
+  partition: dirichlet
+  alpha: 0.3
+  communication_rounds: 40
+  local_epochs: 2
+
+noise:
+  client_id: 0
+  noise_rate: 0.4
+
+training:
+  batch_size: 64
+  learning_rate: 0.01
+  optimizer: SGD
+
+fedprox:
+  mu: 0.01
